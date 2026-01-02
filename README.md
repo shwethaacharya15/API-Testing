@@ -1,52 +1,134 @@
-# API Testing Repo – Day 1
+API Testing – 25 Days Real-World Challenge
+Overview
 
-## Overview
-This repo contains notes, test case templates, and documentation for understanding real API testing principles.  
-Focus: Async processing, downstream verification, and system-thinking mindset.
+This repository documents a 25-day structured API Testing challenge focused on real-world backend and system-level testing, not just request–response validation.
 
----
+The challenge is designed to build a strong API tester mindset covering:
 
-## Day 1 – Real API Tester Mindset
+Async processing
 
-### Key Takeaways:
-1. **200 OK ≠ Business Success**
-   - HTTP success only indicates the request was accepted, not completed.
-2. **Async vs Sync APIs**
-   - Async APIs return before processing completes.
-   - Testing must include DB, queues, logs, and downstream effects.
-3. **System Thinking**
-   - Consider: downstream systems, message queues, workers, and user impact.
-4. **Silent Failures**
-   - Failures can happen without any client-visible error.
-   - Always check persistence, retries, and idempotency.
+Downstream verification
 
----
+Failure diagnosis
 
-## Where to Check Failures
-- **Database** – source of truth for persistence
-- **Logs** – trace workflow, retries, exceptions
-- **Queues / Workers** – confirm async processing
-- **External Services** – payment, inventory, notifications
+Contract testing
 
----
+REST Assured automation with purpose
 
-## Typical Async Failure Diagnosis
-Example workflow:
-1. API returns 200 → check DB
-2. DB record exists → check queue / worker logs
-3. Check downstream systems → inventory, payment
-4. Confirm no duplicates and user experience is correct
+Challenge Goal
 
----
+Understand how APIs actually work in production
 
-## Notes & Reference
-- Status code ≠ business success
-- Poll async APIs until terminal state
-- Validate compensation flows (refunds, retries)
-- Trace errors from the system root, not just response
+Test beyond HTTP status codes
 
----
+Validate business completion, not just responses
 
-## Next Steps
-- Day 2: Hands-on Postman testing with async APIs
-- Start building test cases, logging results, and documenting in `test-cases/`
+Learn to detect silent failures
+
+Build confidence for API testing interviews
+
+25-Day Learning Plan (High Level)
+Phase 1: API & System Fundamentals
+
+How APIs work internally (request → service → DB → queue → worker)
+
+Sync vs Async behavior
+
+HTTP beyond status codes
+
+REST as state, not endpoints
+
+Phase 2: Data, Async & Failure Handling
+
+Database persistence & transactions
+
+Message queues & eventual consistency
+
+Async API testing strategies
+
+Error handling & negative testing
+
+Phase 3: Postman With Intent
+
+Collections & environments
+
+Assertions that matter
+
+Pre-request & post-response scripts
+
+Polling, retries, and async validation
+
+Phase 4: Contracts, Security & Observability
+
+Swagger / OpenAPI testing
+
+Contract vs reality
+
+Versioning & backward compatibility
+
+API security basics
+
+Rate limiting & throttling
+
+Logs & correlation IDs
+
+Phase 5: REST Assured (Automation With Brain)
+
+REST Assured setup
+
+Deep assertions
+
+Auth handling
+
+Async automation (polling, Awaitility)
+
+DB validation
+
+Failure simulation
+
+Final API testing framework project
+
+What This Repo Contains
+
+Daily learning notes
+
+Real production scenarios
+
+Failure analysis examples
+
+Postman collections
+
+Swagger findings
+
+REST Assured automation code
+
+Diagrams and test cases
+
+Core Testing Principles
+
+HTTP success ≠ business success
+
+Async APIs require waiting and verification
+
+Database is the source of truth
+
+Logs explain why, DB shows what
+
+Idempotency prevents duplicate disasters
+
+Test outcomes, not just responses
+
+Repository Structure (Planned)
+API-Testing/
+├── day-wise-notes/
+├── postman/
+├── async-testing/
+├── swagger/
+├── rest-assured/
+├── diagrams/
+├── test-cases/
+└── README.md
+
+Status
+
+🚀 25-Day API Testing Challenge – In Progress
