@@ -1,124 +1,114 @@
-API Testing – 25 Days Real-World Challenge
-Overview
+# 🔥 API Testing — 25 Days Real-World Challenge
 
-This repository documents a 25-day structured API Testing challenge focused on real-world backend and system-level testing, not just request–response validation.
+> **Status codes don’t break systems.  
+Assumptions do.**
 
-The challenge is designed to build a strong API tester mindset covering:
+This repository documents a **25-day hands-on API Testing challenge** focused on how APIs **actually behave in production**, not how they look in tutorials.
 
-Async processing
+If you think `200 OK` means success — this repo will fix that.
 
-Downstream verification
+---
 
-Failure diagnosis
+## 💥 Why This Challenge Exists
 
-Contract testing
+Most API testing stops at:
 
-REST Assured automation with purpose
+Send request → Check status → Done
 
-Challenge Goal
+Real systems don’t fail that way.
 
-Understand how APIs actually work in production
+This challenge trains you to:
+- Test **what happens after the response**
+- Catch **silent async failures**
+- Validate **business outcomes**, not messages
+- Think like a tester who understands backend systems
 
-Test beyond HTTP status codes
+---
 
-Validate business completion, not just responses
+## 🧠 What You’ll Learn (High-Impact Only)
 
-Learn to detect silent failures
+- How APIs work internally  
+  *(Client → API → Service → DB → Queue → Worker)*
+- Why async APIs return success before work is done
+- How retries cause **duplicate payments**
+- Why idempotency is a production lifesaver
+- Where to look when users complain *minutes later*
+- How to test APIs like a **system**, not an endpoint
 
-Build confidence for API testing interviews
+---
 
-25-Day Learning Plan (High Level)
-Phase 1: API & System Fundamentals
+## ⚔️ The 25-Day Challenge (Big Picture)
 
-How APIs work internally (request → service → DB → queue → worker)
+### Phase 1 — Foundations That Actually Matter
+- How APIs **really** work
+- Sync vs Async (no textbook nonsense)
+- HTTP beyond status codes
+- REST as **state**, not URLs
 
-Sync vs Async behavior
+### Phase 2 — Data, Queues & Failure Reality
+- Database persistence & rollbacks
+- Message queues & eventual consistency
+- Async API testing strategies
+- Error handling & negative testing
 
-HTTP beyond status codes
+### Phase 3 — Postman With Intent
+- Assertions that catch real bugs
+- Polling & async validation
+- Pre-request & post-response scripts
+- Testing retries and failures
 
-REST as state, not endpoints
+### Phase 4 — Contracts, Security & Observability
+- Swagger as a testing contract
+- Contract vs reality
+- API versioning & backward compatibility
+- Auth, rate limiting & abuse cases
+- Logs, correlation IDs & tracing
 
-Phase 2: Data, Async & Failure Handling
+### Phase 5 — REST Assured (Automation With Brain)
+- Automation that validates **behavior**
+- Async testing with polling (Awaitility)
+- DB validation
+- Failure simulation
+- Final API testing framework project
 
-Database persistence & transactions
+---
 
-Message queues & eventual consistency
+## 🧪 What This Repo Contains
 
-Async API testing strategies
+- 📘 Day-wise learning notes  
+- 💥 Real production failure scenarios  
+- 📮 Postman collections  
+- 📄 Swagger findings  
+- 🤖 REST Assured automation  
+- 🧩 API flow diagrams  
+- 🧪 Test cases & validation strategies  
 
-Error handling & negative testing
+---
 
-Phase 3: Postman With Intent
+## 🛑 What This Repo Is NOT
 
-Collections & environments
+- ❌ A basic REST tutorial  
+- ❌ Tool-only automation snippets  
+- ❌ Happy-path testing notes  
 
-Assertions that matter
+This repo focuses on **how systems fail and how testers catch it**.
 
-Pre-request & post-response scripts
+---
 
-Polling, retries, and async validation
+## 🔑 Core API Testing Principles
 
-Phase 4: Contracts, Security & Observability
+- HTTP success ≠ business success  
+- Async APIs require **waiting and verification**  
+- Database is the **source of truth**  
+- Logs explain *why*, DB shows *what*  
+- Idempotency prevents duplicate disasters  
+- Test outcomes, not just responses  
 
-Swagger / OpenAPI testing
+---
 
-Contract vs reality
+## 📂 Repository Structure
 
-Versioning & backward compatibility
-
-API security basics
-
-Rate limiting & throttling
-
-Logs & correlation IDs
-
-Phase 5: REST Assured (Automation With Brain)
-
-REST Assured setup
-
-Deep assertions
-
-Auth handling
-
-Async automation (polling, Awaitility)
-
-DB validation
-
-Failure simulation
-
-Final API testing framework project
-
-What This Repo Contains
-
-Daily learning notes
-
-Real production scenarios
-
-Failure analysis examples
-
-Postman collections
-
-Swagger findings
-
-REST Assured automation code
-
-Diagrams and test cases
-
-Core Testing Principles
-
-HTTP success ≠ business success
-
-Async APIs require waiting and verification
-
-Database is the source of truth
-
-Logs explain why, DB shows what
-
-Idempotency prevents duplicate disasters
-
-Test outcomes, not just responses
-
-Repository Structure (Planned)
+```text
 API-Testing/
 ├── day-wise-notes/
 ├── postman/
@@ -128,7 +118,3 @@ API-Testing/
 ├── diagrams/
 ├── test-cases/
 └── README.md
-
-Status
-
-🚀 25-Day API Testing Challenge – In Progress
