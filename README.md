@@ -1,114 +1,60 @@
-# 🔥 API Testing — 25 Days Real-World Challenge
+🔥 API Testing — Postman Unseen Topics
 
-> **Status codes don’t break systems.  
-Assumptions do.**
+Status codes don’t equal success. Postman alone won’t teach this.
 
-This repository documents a **25-day hands-on API Testing challenge** focused on how APIs **actually behave in production**, not how they look in tutorials.
+This challenge is for testers who want to catch real-world API failures beyond happy paths.
 
-If you think `200 OK` means success — this repo will fix that.
+💥 What Postman Won’t Show You
 
----
+Async APIs: Success may return before work completes
 
-## 💥 Why This Challenge Exists
+Retries & Idempotency: Prevent duplicate payments or actions
 
-Most API testing stops at:
+Database & Logs: Postman can’t verify side effects
 
-Send request → Check status → Done
+Polling & Waiting: Properly test async workflows
 
-Real systems don’t fail that way.
+Advanced Assertions: Validate outcomes, not just responses
 
-This challenge trains you to:
-- Test **what happens after the response**
-- Catch **silent async failures**
-- Validate **business outcomes**, not messages
-- Think like a tester who understands backend systems
+Eventual Consistency & Queues: Hidden failures happen here
 
----
+⚔️ Challenge Focus Areas
 
-## 🧠 What You’ll Learn (High-Impact Only)
+Foundations: Client → API → Service → DB → Queue → Worker
 
-- How APIs work internally  
-  *(Client → API → Service → DB → Queue → Worker)*
-- Why async APIs return success before work is done
-- How retries cause **duplicate payments**
-- Why idempotency is a production lifesaver
-- Where to look when users complain *minutes later*
-- How to test APIs like a **system**, not an endpoint
+Failures: Rollbacks, negative scenarios, retries, and idempotency
 
----
+Postman Scripts: Pre-request & post-response scripts for real bugs
 
-## ⚔️ The 25-Day Challenge (Big Picture)
+Contracts & Observability: Auth, rate limits, versioning, logs
 
-### Phase 1 — Foundations That Actually Matter
-- How APIs **really** work
-- Sync vs Async (no textbook nonsense)
-- HTTP beyond status codes
-- REST as **state**, not URLs
+Optional Automation: REST Assured integration, DB validation, async polling
 
-### Phase 2 — Data, Queues & Failure Reality
-- Database persistence & rollbacks
-- Message queues & eventual consistency
-- Async API testing strategies
-- Error handling & negative testing
+🧪 Repo Contains
 
-### Phase 3 — Postman With Intent
-- Assertions that catch real bugs
-- Polling & async validation
-- Pre-request & post-response scripts
-- Testing retries and failures
+Day-wise Postman notes
 
-### Phase 4 — Contracts, Security & Observability
-- Swagger as a testing contract
-- Contract vs reality
-- API versioning & backward compatibility
-- Auth, rate limiting & abuse cases
-- Logs, correlation IDs & tracing
+Real production failure scenarios
 
-### Phase 5 — REST Assured (Automation With Brain)
-- Automation that validates **behavior**
-- Async testing with polling (Awaitility)
-- DB validation
-- Failure simulation
-- Final API testing framework project
+Advanced Postman collections & scripts
 
----
+Swagger findings & API flow diagrams
 
-## 🧪 What This Repo Contains
+Test cases & validation strategies
 
-- 📘 Day-wise learning notes  
-- 💥 Real production failure scenarios  
-- 📮 Postman collections  
-- 📄 Swagger findings  
-- 🤖 REST Assured automation  
-- 🧩 API flow diagrams  
-- 🧪 Test cases & validation strategies  
+🔑 Core Principles
 
----
+HTTP success ≠ business success
 
-## 🛑 What This Repo Is NOT
+Async APIs need verification & waiting
 
-- ❌ A basic REST tutorial  
-- ❌ Tool-only automation snippets  
-- ❌ Happy-path testing notes  
+DB is source of truth; logs explain why
 
-This repo focuses on **how systems fail and how testers catch it**.
+Idempotency prevents disasters
 
----
+Test outcomes, not just responses
 
-## 🔑 Core API Testing Principles
-
-- HTTP success ≠ business success  
-- Async APIs require **waiting and verification**  
-- Database is the **source of truth**  
-- Logs explain *why*, DB shows *what*  
-- Idempotency prevents duplicate disasters  
-- Test outcomes, not just responses  
-
----
-
-## 📂 Repository Structure
-
-```text
+📂 Repo Structure
 API-Testing/
 ├── day-wise-notes/
 ├── postman/
