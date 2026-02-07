@@ -56,11 +56,11 @@ Test outcomes, not just responses
 
 📂 Repo Structure
 API-Testing/
-├── day-wise-notes/
-├── postman/
-├── async-testing/
-├── swagger/
-├── rest-assured/
-├── diagrams/
-├── test-cases/
+├── day-wise-notes/       # Postman learning notes
+├── postman/              # Collections & scripts
+├── async-testing/        # Async validation scripts
+├── swagger/              # Contracts & discrepancies
+├── rest-assured/         # Optional automation
+├── diagrams/             # API flows
+├── test-cases/           # Validation strategies
 └── README.md
